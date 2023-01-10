@@ -1,0 +1,40 @@
+<form (submit)="login()">
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="this.email" name="email" required />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      [type]="hide ? 'password' : 'text'"
+      [(ngModel)]="this.password"
+      name="password"
+      required
+      (submit)="login()"
+    />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+  </mat-form-field>
+</form>
+<br />
+<button
+  mat-raised-button
+  type="submit"
+  color="accent"
+  style="margin-top: 10px; margin-right: 10px"
+  (click)="login(); ui.getBlogPosts()"
+>
+  Login
+</button>
+<button mat-raised-button type="submit" color="accent" style="margin-top: 10px" (click)="ui.showRegister()">
+  Register
+</button>
