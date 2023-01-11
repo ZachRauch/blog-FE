@@ -17,6 +17,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatBadgeModule} from '@angular/material/badge';
 import { FormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { NewBlogpostComponent } from './components/new-blogpost/new-blogpost.component';
 
 
 
@@ -25,7 +27,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    BlogpostComponent
+    BlogpostComponent,
+    NewBlogpostComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatBadgeModule,
     FormsModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,28 @@
 <h1>Home Page</h1>
+
+<button
+  *ngIf="ui.isLoggedIn"
+  mat-icon-button
+  aria-hidden="false"
+  aria-label="Example home icon"
+  fontIcon="home"
+  (click)="ui.logoutUser()"
+>
+  <mat-icon>logout</mat-icon>
+</button>
+
+<button
+  *ngIf="ui.isLoggedIn"
+  mat-icon-button
+  aria-hidden="false"
+  aria-label="Example home icon"
+  fontIcon="home"
+  (click)="ui.showNewPost()"
+>
+  <mat-icon>add</mat-icon>
+</button>
+
 <app-login *ngIf="ui.displayLogin"></app-login>
 <app-register *ngIf="ui.displayRegister"></app-register>
-<app-blogpost></app-blogpost>
-<!-- *ngIf="ui.displayPosts" -->
+<app-blogpost *ngIf="ui.displayPosts"></app-blogpost>
+<app-new-blogpost *ngIf="ui.displayNewPost"></app-new-blogpost>

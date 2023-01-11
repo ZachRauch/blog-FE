@@ -1,0 +1,13 @@
+<p>new-blogpost works!</p>
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>titleTest</mat-label>
+    <input matInput placeholder="Ex. Pizza" value="Sushi" [(ngModel)]="titleText" name="titleText">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>bodyText</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)]="bodyText" name="bodyText"></textarea>
+  </mat-form-field>
+</form>
+<button (click)="createPostAndAdd(this.user, titleText, bodyText);">Submit Post</button>

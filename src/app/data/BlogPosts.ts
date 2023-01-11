@@ -5,6 +5,6 @@ export class BlogPost {
         public titleText: string,
         public bodyText: string,
         public datePosted: Date,
-        public updateDate: Date
+        public updateDate: Date | null
     ){}
 }
